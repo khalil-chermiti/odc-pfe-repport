@@ -3,7 +3,12 @@
 \usepackage{graphicx}
 \usepackage{geometry}
 \usepackage{lipsum}
-% \usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+
+\setcounter{secnumdepth}{5}
+\spacing{1.5}
 
 \newgeometry{
   top=0.75in,
@@ -18,9 +23,22 @@
 
 \begin{document}
 
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\fancyhead[R]{}
+\fancyhead[L]{\chaptername\ \thechapter\ --\ \leftmark}
+
 \maketitle
 
-\include{Acknowledgement}
-\include{Introduction}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\include{chapters/Acknowledgement}
+\include{chapters/Introduction}
+\include{chapters/chapter1}
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
 
 \end{document}
