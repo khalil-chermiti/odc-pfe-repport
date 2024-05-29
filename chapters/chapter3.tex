@@ -16,16 +16,16 @@ ID & US & Estimation & Tâches à réaliser \\
     \\- Preparing the libraries and creating the REST APIs
     \\ - Preparing the database \end{tabular} \\
 \hline
-1 & as a collaborator, I want to authenticate to the platform & 3 &\begin{tabular}[c]{@{}l@{}}- Creation of the graphical interface (UX) for authentication for \\ an Orange collaborator Administrator/Coordinator/Exepert\\
+1 & as a collaborator, I want to authenticate to the platform & 3 &\begin{tabular}[c]{@{}l@{}}- Creation of the graphical interface (UX) for authentication for \\ an ODC collaborator Administrator/Coordinator/Exepert\\
 
 -Implement the interface
-\\-Implement the necessary methods to ensure user authentication
+\\-Implement the necessary methods to ensure  \\ODC collaborator authentication
 \\-Test \end{tabular}\\
 \hline
-2 & as a collaborator, I want to logout of the platform & 2 & \begin{tabular}[c]{@{}l@{}} Creation of the graphical interface (UX) for logout for \\an Orange collaborator Administrator/Coordinator/Exepert\\
+2 & as a collaborator, I want to logout of the platform & 2 & \begin{tabular}[c]{@{}l@{}} Creation of the graphical interface (UX) for logout for \\an ODC collaborator Administrator/Coordinator/Exepert\\
 
     -Implement the interface
-    \\-Implement the necessary methods to ensure user logout
+    \\-Implement the necessary methods to ensure \\ODC collaborator logout
     \\-Test \end{tabular}\\
 \hline
 3 & As a collaborator, I want to update my profile &2 & \begin{tabular}[c]{@{}l@{}}- Creation of the graphical interface (UX) for updating profile \\
@@ -53,7 +53,7 @@ ID & US & Estimation & Tâches à réaliser \\
             - Implement the necessary methods to add an ODC coordinator \\
             - Test \end{tabular} \\
             \hline
-    6 &\begin{tabular}[c]{@{}l@{}} As a super admin,\\ I want to enable/disable \\an ODC collaborator \\coordinator/Expert \end{tabular} & 3& \begin{tabular}[c]{@{}l@{}}- Creation of the graphical interface (UX) for enabling/disabling an \\ODC collaborator coordinator/Expert \\
+    6 &\begin{tabular}[c]{@{}l@{}} As a super admin,\\ I want to enable\\/disable an ODC collaborator \\coordinator/Expert \end{tabular} & 3& \begin{tabular}[c]{@{}l@{}}- Creation of the graphical interface (UX) for enabling/\\disabling an ODC collaborator coordinator/Expert \\
         - Implement the interface \\
         - Implement the necessary methods to enable/disable an ODC \\collaborator coordinator/Expert \\
         - Test \end{tabular} \\
@@ -63,17 +63,17 @@ ID & US & Estimation & Tâches à réaliser \\
             - Implement the necessary methods to view ODC experts list \\
             - Test \end{tabular} \\
             \hline
-        7 & As an ODC Coordinator, I want to add an ODC Expert &2& \begin{tabular}[c]{@{}l@{}}- Creation of the graphical interface (UX) for adding an\\ ODC Expert \\
+        8& As an ODC Coordinator, I want to add an ODC Expert &2& \begin{tabular}[c]{@{}l@{}}- Creation of the graphical interface (UX) for adding an\\ ODC Expert \\
             - Implement the interface \\
             - Implement the necessary methods to add an ODC Expert \\
             - Test \end{tabular} \\
             \hline        
-            8 & As an ODC Coordinator, I want to enable/disable an ODC Expert &2 & \begin{tabular}[c]{@{}l@{}}- Creation of the graphical interface (UX) for enabling\\/disabling an ODC Expert \\
+            9 & As an ODC Coordinator, I want to enable/disable an ODC Expert &2 & \begin{tabular}[c]{@{}l@{}}- Creation of the graphical interface (UX) for enabling\\/disabling an ODC Expert \\
                 - Implement the interface \\
                 - Implement the necessary methods to enable/disable \\an ODC Expert \\
                 - Test \end{tabular} \\
                 \hline
-                9 & As an ODC Coordinator,I want to view ODC experts list &2 & \begin{tabular}[c]{@{}l@{}}- Creation of the graphical interface (UX) for viewing \\ODC experts list \\
+                10 & As an ODC Coordinator,I want to view ODC experts list &2 & \begin{tabular}[c]{@{}l@{}}- Creation of the graphical interface (UX) for viewing \\ODC experts list \\
                     - Implement the interface \\
                     - Implement the necessary methods to view ODC experts list \\
                     - Test \end{tabular} \\
@@ -101,23 +101,23 @@ The following figure represents the use case diagram for our first sprint.
         \hline
         Use Case & authenticate \\
         \hline
-    Actor &\begin{tabular}[c]{@{}l@{}} User: Collaborator/Administrator
+    Actor &\begin{tabular}[c]{@{}l@{}} ODC collaborator: Collaborator/Administrator
 
 
     \end{tabular} \\
         \hline
-        Brief Description &\begin{tabular}[c]{@{}l@{}} The user must be registered in the database and must know their credentials
+        Brief Description &\begin{tabular}[c]{@{}l@{}} The ODC collaborator must be registered in the database and must know their credentials
         \end{tabular} \\
             \hline
-            Pre-condition &\begin{tabular}[c]{@{}l@{}} The user must have their access parameters
+            Pre-condition &\begin{tabular}[c]{@{}l@{}} The ODC collaborator must have their access parameters
             \end{tabular} \\
                 \hline
-                Post-condition &\begin{tabular}[c]{@{}l@{}} The user is successfully authenticated
+                Post-condition &\begin{tabular}[c]{@{}l@{}} The ODC collaborator is successfully authenticated
                 \end{tabular} \\
                     \hline
-                    Main Scenario &\begin{tabular}[c]{@{}l@{}} 1. The user enters their credentials (email and password) in the appropriate fields \\and submits the form.
-                       \\ 2. The system verifies the information entered by the user
-                        \\3. The system displays the appropriate interface according to the role of the user
+                    Main Scenario &\begin{tabular}[c]{@{}l@{}} 1. The ODC collaborator enters their credentials (email and password) in the appropriate fields \\and submits the form.
+                       \\ 2. The system verifies the information entered by the ODC collaborator
+                        \\3. The system displays the appropriate interface according to the role of the ODC collaborator
                     \end{tabular} \\
                         \hline
                         Exception Scenario &\begin{tabular}[c]{@{}l@{}} 1.1 The entered data is incorrect or missing:
@@ -126,7 +126,7 @@ The following figure represents the use case diagram for our first sprint.
                             \\2.1.1 The system displays an error message and the use case returns to step 2 of the main scenario
                         \end{tabular} \\
                             \hline
-                            Extension &\begin{tabular}[c]{@{}l@{}} In case of forgotten password, the user can redefine a new password
+                            Extension &\begin{tabular}[c]{@{}l@{}} In case of forgotten password, the ODC collaborator can redefine a new password
                             \end{tabular} \\
                                 \hline
                                 
@@ -154,7 +154,7 @@ The following figure represents the use case diagram for our first sprint.
 
    
     \newpage
-    Each user who wants to authenticate must access the authentication page. Then, they enter their email and password. The system validates and verifies their existence. If these credentials are valid, a message indicating that the user must activate their account via email is sent. The user then checks their email inbox and clicks on the received link to securely access their personal space. Otherwise, an error message is displayed indicating that the entered data is invalid.
+    Each ODC collaborator who wants to authenticate must access the authentication page. Then, they enter their email and password. The system validates and verifies their existence. If these credentials are valid, a message indicating that the ODC collaborator must activate their account via email is sent. The ODC collaborator then checks their email inbox and clicks on the received link to securely access their personal space. Otherwise, an error message is displayed indicating that the entered data is invalid.
 
 
     \subsection{Textual Description of the Use Case "Add Coordinator"}
@@ -270,7 +270,7 @@ The following figure represents the use case diagram for our first sprint.
 \newpage
 \subsubsection{Authenticate}
 
-Access to the main page of the site is done using authentication. This is the first interface of our platform. To log in, the user enters their email and password.
+Access to the main page of the site is done using authentication. This is the first interface of our platform. To log in, the ODC collaborator enters their email and password.
 
 The figure below represents the authentication interface.
 
@@ -289,4 +289,6 @@ The figure below represents the authentication interface.
     \label{fig:"Authentication Problem"}
 \end{figure}
 \subsubsection{Add Coordinator}
+ \section{Conclusion}
+ In this chapter, we detailed the first sprint. In the following chapter, we will produce the second sprint.
  
