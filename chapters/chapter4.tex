@@ -93,3 +93,68 @@ In this chapter, we will design and implement the functionalities of the second 
 \bigbreak
 \newpage
 \section{Use Case Diagram for Sprint 2}
+The figure below presents the overall use case diagram that illustrates all the functionalities to be completed throughout this sprint.
+
+\begin{figure}[h!]
+    \centering*
+    \includegraphics[width=0.8\textwidth]{images/use-case3.png}
+    \caption{Use Case Diagram for Sprint 2}
+    \label{fig:Use Case Diagram for Sprint 2}
+\end{figure}
+\subsection{Textual Description of the Use Case "Create a Problem"}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|p{12cm}|}
+        \hline
+        Use Case & Create a Problem \\
+        \hline
+        Actor & Expert  \\
+        \hline
+        Brief Description & The expert wants to create and define a new problem for users to solve. The expert enters the problem name, description, code template, test cases, and solution. The system tests the provided solution against the defined test cases before saving the problem. \\
+        \hline
+        Pre-condition & The expert is logged into the system and has access to the "Create Problem" interface. \\
+        \hline
+        Post-condition & The new problem is tested and saved in the system, and is available for users to solve. \\
+        \hline
+        Main Scenario & \begin{tabular}[c]{@{}l@{}} 
+            1. The expert navigates to the "Create" section from the left-side menu. \\
+            2. The system displays the "Create Problem" interface. \\
+            3. The expert enters the problem name in the "Problem name" field. \\
+            4. The expert provides a detailed description in \\the "Problem description" field. \\
+            5. The expert writes a code template in the "code template" text area. \\
+            6. The expert defines test cases in the "Test Cases" section. \\
+            7. The expert writes a sample solution in the "Solution" section. \\
+            8. The expert clicks the "Test Problem" button to test the \\problem and solution. \\
+            9. The system runs the provided solution against the test cases\\ and displays the results. \\
+            10. If the solution passes all test cases, the expert clicks the \\"Create Problem" button to save the problem. \\
+            11. The system validates the information and saves \\the problem to the database.
+        \end{tabular} \\
+        \hline
+        Exception Scenario & \begin{tabular}[c]{@{}l@{}} 
+            1. Invalid Input: \\
+            1.1 If the expert enters invalid or incomplete information, the system \\displays error messages indicating the specific issues. \\
+            1.2 The expert corrects the errors and attempts to create the problem again. \\
+            2. Test Problem Failure: \\
+            2.1 If the provided solution does not pass the test cases, the system displays \\the test results indicating the failures. \\
+            2.2 The expert reviews and corrects the solution or test cases and tests \\the problem again.
+        \end{tabular} \\
+        \hline
+        Extension & If the system encounters any issues during validation or database updates, appropriate error messages are displayed, and the expert is prompted to correct the issues. If the system cannot connect to the database, an error message is displayed and the operation is aborted. \\
+        \hline
+    \end{tabular}
+   
+    \begin{center}
+        \caption{Textual Description of the Use Case "Create a Problem"}
+        \label{tab:Textual Description of the Use Case "Create a Problem"}
+       
+    \end{center}   
+\end{table}
+ \subsection{the sequence diagram for the use case'Add problem'} 
+ \newpage
+\begin{figure}[h!]
+    \centering*
+    \includegraphics[width=0.8\textwidth]{images/diagram (6).png}
+    \caption{the sequence diagram for the use case 'Add problem'}
+    \label{fig:the sequence diagram for the use case 'Add problem'}
+\end{figure}
