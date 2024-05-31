@@ -1,7 +1,7 @@
 \chapter{Sprint2}
 \section{Introduction}
 In this chapter, we will design and implement the functionalities of the second sprint of our project. First, we will present the Sprint Backlog, where we will detail the requested features. The next step involves analyzing the specified features. Finally, we will show the output of this sprint.
-\bigskip
+
 \section {Backlog Sprint}
 \begin{table}
 \begin{tabular}{|c|p{5cm}|c|p{10cm}|}
@@ -90,7 +90,6 @@ In this chapter, we will design and implement the functionalities of the second 
     \caption{Backlog for the second Sprint}
 \label{tab:Backlog for the First Sprint}
 \end{table}
-\bigbreak
 \newpage
 \section{Use Case Diagram for Sprint 2}
 The figure below presents the overall use case diagram that illustrates all the functionalities to be completed throughout this sprint.
@@ -101,6 +100,7 @@ The figure below presents the overall use case diagram that illustrates all the 
     \caption{Use Case Diagram for Sprint 2}
     \label{fig:Use Case Diagram for Sprint 2}
 \end{figure}
+\newpage
 \subsection{Textual Description of the Use Case "Create a Problem"}
 
 \begin{table}[h]
@@ -143,18 +143,139 @@ The figure below presents the overall use case diagram that illustrates all the 
         Extension & If the system encounters any issues during validation or database updates, appropriate error messages are displayed, and the expert is prompted to correct the issues. If the system cannot connect to the database, an error message is displayed and the operation is aborted. \\
         \hline
     \end{tabular}
-   
     \begin{center}
         \caption{Textual Description of the Use Case "Create a Problem"}
-        \label{tab:Textual Description of the Use Case "Create a Problem"}
-       
-    \end{center}   
+        \label{Textual Description of the Use Case "Add a Problem"}
+    \end{center}    
 \end{table}
- \subsection{the sequence diagram for the use case'Add problem'} 
- \newpage
+\newpage
+\subsection{System Sequence Diagram for the Use Case "Add Problem"}
+
 \begin{figure}[h!]
     \centering*
-    \includegraphics[width=0.8\textwidth]{images/diagram (6).png}
-    \caption{the sequence diagram for the use case 'Add problem'}
-    \label{fig:the sequence diagram for the use case 'Add problem'}
+    \includegraphics[width=0.8\textwidth]{images/diagram seqq.png}
 \end{figure}
+\begin{figure}[h!]
+    \centering*
+    \includegraphics[width=0.8\textwidth]{images/diagram6.png}
+    \caption{System Sequence Diagram for the Use Case "Add Problem"}
+    \label{System Sequence Diagram for the Use Case "Add Problem"}
+\end{figure}
+
+\newpage 
+\subsection{Textual Description of the Use Case"edit Quizze"}
+\begin{table}[h]
+\centering
+    \begin{tabular}{|c|p{12cm}|}
+        \hline
+        Use Case & Edit a Quiz \\
+        \hline
+        Actor & Expert  \\
+        \hline
+        Brief Description & The expert wants to edit and update an existing quiz. The expert can modify the quiz name, description, questions, and answers. The system validates the changes before saving the updated quiz. \\
+        \hline
+        Pre-condition & The expert is logged into the system and has access to the "Edit Quiz" interface. \\
+        \hline
+        Post-condition & The updated quiz is saved in the system and is available for users to take. \\
+        \hline  \end{tabular}\end{table}
+        \begin{table}[h]
+            \centering
+            \begin{tabular}{|c|p{12cm}|}
+                \hline
+              
+        Main Scenario & \begin{tabular}[c]{@{}l@{}} 
+            1. The expert navigates to the "Quizzes" section from the left-side menu. \\
+            2. The system displays the list of existing quizzes. \\
+            3. The expert selects a quiz to edit. \\
+            4. The system displays the "Edit Quiz" interface. \\
+            5. The expert modifies the quiz name in the "Quiz Name" field. \\
+            6. The expert updates the quiz description in the "Quiz Description" field. \\
+            7. The expert edits the questions in the "Questions" section. \\
+            8. The expert updates the answers in the "Answers" section. \\
+            9. The expert clicks the "Save Changes" button to save the updated quiz. \\
+            10. The system validates the changes and saves the updated quiz to the database. \\
+        \end{tabular} \\
+        \hline
+        Exception Scenario & \begin{tabular}[c]{@{}l@{}} 
+            1. Invalid Input: \\
+            1.1 If the expert enters invalid or incomplete information, the system displays \\error messages indicating the specific issues. \\
+            1.2 The expert corrects the errors and attempts to save the changes again. \\
+            2. Save Failure: \\
+            2.1 If the system fails to save the updated quiz, an error message is displayed. \\
+            2.2 The expert reviews and corrects the information and attempts to save the quiz again. \\
+        \end{tabular} \\
+        \hline
+        Extension & If the system encounters any issues during validation or database updates, appropriate error messages are displayed, and the expert is prompted to correct the issues. If the system cannot connect to the database, an error message is displayed and the operation is aborted. \\
+        \hline
+    \end{tabular}
+    \begin{center}
+        \caption{Textual Description of the Use Case "Edit a Quiz"}
+        \label{Textual Description of the Use Case "Edit a Quiz"}
+    \end{center}    
+\end{table}
+\newpage
+
+\subsection{System Sequence Diagram for the Use Case "Edit Quizze"}
+
+\begin{figure}[h!]
+    \centering*
+    \includegraphics[width=0.8\textwidth]{images/diagram quizz.png}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering*
+    \includegraphics[width=0.8\textwidth]{images/diagram quizz2.png}
+    \caption{System Sequence Diagram for the Use Case "edit Quizze"}
+    \label{fig:System Sequence Diagram for the Use Case "edit Quizze"}
+\end{figure}
+\newpage
+\subsection{Textual Description of the Use Case "Delete a Test"}
+\begin{table}[h]
+    \centering
+        \begin{tabular}{|c|p{12cm}|}
+            \hline
+            Use Case & Delete a Test \\
+            \hline
+            Actor & Expert  \\
+            \hline
+            Brief Description & The expert wants to delete an existing test. The system confirms the deletion and removes the test from the database. \\
+            \hline
+            Pre-condition & The expert is logged into the system and has access to the "Delete Test" interface. \\
+            \hline
+            Post-condition & The test is deleted from the system and is no longer available for users. \\
+     
+            \hline
+            Main Scenario & \begin{tabular}[c]{@{}l@{}} 
+                1. The expert navigates to the "Tests" section from the left-side menu. \\
+                2. The system displays the list of existing tests. \\
+                3. The expert selects a test to delete. \\
+                4. The system displays a confirmation prompt. \\
+                5. The expert confirms the deletion. \\
+                6. The system validates the request and deletes the test from the database. \\
+                7. The system confirms the deletion to the expert. \\
+            \end{tabular} \\
+            \hline
+            Exception Scenario & \begin{tabular}[c]{@{}l@{}} 
+                1. Invalid Selection: \\
+                1.1 If the expert selects an invalid or non-existent test, the system displays an\\ error message. \\
+                1.2 The expert selects a valid test and attempts the deletion again. \\
+                2. Deletion Failure: \\
+                2.1 If the system fails to delete the test, an error message is displayed. \\
+                2.2 The expert reviews and corrects any issues and attempts to delete \\    the test again. \\
+            \end{tabular} \\
+            \hline
+            Extension & If the system encounters any issues during validation or database updates, appropriate error messages are displayed, and the expert is prompted to correct the issues. If the system cannot connect to the database, an error message is displayed and the operation is aborted. \\
+            \hline
+        \end{tabular}
+        \begin{center}
+            \caption{Textual Description of the Use Case "Delete a Test"}
+            \label{Textual Description of the Use Case "Delete a Test"}
+        \end{center}    
+    \end{table}
+    \subsection{System Sequence Diagram for the Use Case "Delete a Test"}
+    \begin{figure}[h!]
+        \centering*
+        \includegraphics[width=0.8\textwidth]{images/diagram sq .png}
+        \caption{System Sequence Diagram for the Use Case "Delete a Test"}
+        \label{fig:System Sequence Diagram for the Use Case "Delete a Test"}
+    \end{figure}
