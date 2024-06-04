@@ -136,15 +136,15 @@ indicate the order of their implementation.
       1                      & as a super admin, I want to authenticate to the platform & 1                 \\ \hline
       2                      & as a super admin, I want to logout of the platform       & 3                 \\ \hline
       3                      & as a super admin, I want to add an ODC coordinator       & 2                 \\ \hline
-      4                      & as a super admin, I want to view ODC coordinators List       & 2                 \\ \hline
+      4                      & as a super admin, I want to view ODC coordinators List   & 2                 \\ \hline
       5                      & as a super admin, I want to view  ODC Exepert List       & 2                 \\ \hline
       6                      & as a super admin, I want to disable an ODC coordinator   & 2                 \\ \hline
       7                      & as a super admin, I want to disable an ODC Exepert       & 2                 \\ \hline
       8                      & as an ODC Coordinator, I want connect to my account      & 2                 \\ \hline
       9                      & as an ODC Coordinator, I want to logout of my account    & 3                 \\ \hline
-      10                      & as an ODC Coordinator, I want to update my profile       & 3                 \\ \hline
-      11                      & as an ODC Coordinator, I want to change my password      & 3                 \\ \hline
-      12                      & as an ODC Coordinator, I want to add an ODC expert       & 1                 \\ \hline
+      10                     & as an ODC Coordinator, I want to update my profile       & 3                 \\ \hline
+      11                     & as an ODC Coordinator, I want to change my password      & 3                 \\ \hline
+      12                     & as an ODC Coordinator, I want to add an ODC expert       & 1                 \\ \hline
       13                     & as an ODC Coordinator, I want to disable an ODC expert   & 2                 \\ \hline
       14                     & as an ODC Coordinator, I want to enable an ODC expert    & 2                 \\ \hline
       15                     & as an ODC Coordinator, I want to view ODC experts list   & 3                 \\ \hline
@@ -183,23 +183,29 @@ which varies depending on the project's complexity and the size of the team.
 The global use case diagram is a high-level diagram that shows the interactions
 between the actors and the system. It provides an overview of the system's
 functionality and the actors' roles in the system.
+
 \begin{figure}[h!]
       \centering
-
-      \includegraphics[height=1\textwidth]{images/useCaseGlobal.png}
-      \caption{Global use case diagram}
-      \label{fig:use_case_diagram}
+      \includegraphics[height=1\textwidth, width=0.9\textwidth]{images/generalUseCase.png}
+      \caption{Global use case diagram}\label{fig:use_case_diagram}
 \end{figure}
 
 
 \section{Database schema}
-Our class diagram is given by the following figure:
-\begin{figure}[hbt!]
+The Following figure \ref{MongoDB Schema Diagram} shows the schema of the MongoDB database used in our application.
+The database contains four collections: users, events, problems, and quizzes. Each collection has a set of fields
+that store the data related to that collection. The schema diagram provides a visual representation of the relationships
+between the collections and the fields in each collection.
+
+
+\begin{sidewaysfigure}[h!]
       \centering
-      \includegraphics[width=0.8\textwidth]{images/mongoose-diagram-Page-1.drawio.png}
-      \caption{class diagram}
-      \label{fig:class_diagram}
-\end{figure}
+      \setlength\fboxsep{0pt} % Adjusts the separation between the image and the border
+      \setlength\fboxrule{2pt} % Adjusts the thickness of the border
+      \fcolorbox{orange}{white}{\includegraphics[width=0.8\paperheight, height=0.65\paperwidth]{images/entityDiagram.png}}
+      \caption{MongoDB Schema Diagram}\label{MongoDB Schema Diagram}
+\end{sidewaysfigure}
+
 
 \section{Software and technology stack}
 
