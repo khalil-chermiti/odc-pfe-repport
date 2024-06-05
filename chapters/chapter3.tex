@@ -9,6 +9,7 @@ Following the scrum framework, we have defined the sprint backlog for the first 
 The following table shows the user stories and their corresponding tasks that will be developed in this sprint.
 Being a team, we distributed these task among us, so that each member of the team is responsible for a set of tasks.
 
+\normalsize
 \begin{longtable}{|p{1cm}|p{7cm}|p{1cm}|p{7cm}|}
     \hline
     \rowcolor{green!20} \textbf{ID} & \textbf{User Story}                                           & \textbf{ID} & \textbf{Tasks}                        \\ \hline
@@ -80,6 +81,7 @@ The following table shows the textual description of the login use case.
 
 \begin{table}[h]
     \centering
+    \renewcommand{\arraystretch}{2} % Adjust the line height here
     \begin{tabular}{|p{3cm}|p{12cm}|}
         \hline
         \rowcolor{green!20} \textbf{Use Case} & Login                                                                                                              \\
@@ -114,11 +116,12 @@ of the steps that the super admin must follow to add a new coordinator to the pl
 
 \begin{table}[h]
     \centering
+    \renewcommand{\arraystretch}{1.5} % Adjust the line height here
     \begin{tabular}{|p{3cm}|p{12cm}|}
         \hline
         \rowcolor{green!20} \textbf{Use Case} & Add Coordinator                                                                                                                        \\
         \hline
-        \textbf{Actor}                        & \begin{tabular}[l]{@{}l@{}}
+        \textbf{Actor}                        & \begin{tabular}[t]{@{}l@{}}
                                                     Super Admin \\
                                                     Coordinator
                                                 \end{tabular}                                                                                                             \\
@@ -129,24 +132,24 @@ of the steps that the super admin must follow to add a new coordinator to the pl
         \hline
         \textbf{Post-condition}               & The coordinator is successfully added and can log in after setting up their password.                                                  \\
         \hline
-        \textbf{Main Scenario}                & \begin{tabular}[l]{@{}l@{}}
-                                                    1. The Super Admin accesses the "Add New Coordinator" page.              \\
-                                                    2. The Super Admin fills in the fields: name, last name, country, email. \\
-                                                    3. The Super Admin presses the "Add" button.                             \\
-                                                    4. The system validates the entered information.                         \\
-                                                    5. The system sends an email to the new coordinator.                     \\
-                                                    6. The coordinator receives the email and clicks the link.               \\
-                                                    7. The coordinator is redirected to the password setup page.             \\
-                                                    8. The coordinator sets up the password.                                 \\
+        \textbf{Main Scenario}                & \begin{tabular}[t]{@{}l@{}}
+                                                    1. The Super Admin accesses the "Add New Coordinator" page.  \\
+                                                    2. The Super Admin fills in the fields: name,                \\ last name, country, email. \\
+                                                    3. The Super Admin presses the "Add" button.                 \\
+                                                    4. The system validates the entered information.             \\
+                                                    5. The system sends an email to the new coordinator.         \\
+                                                    6. The coordinator receives the email and clicks the link.   \\
+                                                    7. The coordinator is redirected to the password setup page. \\
+                                                    8. The coordinator sets up the password.                     \\
                                                     9. The coordinator is redirected to the login page.
-                                                \end{tabular}                                                               \\
+                                                \end{tabular}                                             \\
         \hline
-        \textbf{Exception Scenario}           & \begin{tabular}[l]{@{}l@{}}
-                                                    2.1 The entered data is incorrect or missing:                                  \\
-                                                    2.1.1 The system displays an error message and the use case returns to step 2. \\
-                                                    4.1 The entered email is already in use or invalid:                            \\
-                                                    4.1.1 The system displays an error message and the use case returns to step 2.
-                                                \end{tabular}                                                         \\
+        \textbf{Exception Scenario}           & \begin{tabular}[t]{@{}l@{}}
+                                                    2.1 The entered data is incorrect or missing:               \\
+                                                    2.1.1 The system displays an error message and the use case \\ returns to step 2. \\
+                                                    4.1 The entered email is already in use or invalid:         \\
+                                                    4.1.1 The system displays an error message and the use case \\ returns to step 2.
+                                                \end{tabular}                                                      \\
         \hline
         \textbf{Extension}                    & In case of forgotten password, the coordinator can redefine a new password.                                                            \\
         \hline
@@ -158,6 +161,7 @@ of the steps that the super admin must follow to add a new coordinator to the pl
 \subsection{Textual Description of the Use Case `Enable/Disable ODC Expert`}
 \begin{table}[h]
     \centering
+    \renewcommand{\arraystretch}{1.5}
     \begin{tabular}{|p{3cm}|p{12cm}|}
         \hline
         \rowcolor{green!20} \textbf{Use Case} & Enable/Disable ODC Expert                                                                                                                                                                                                                                                \\
@@ -227,5 +231,40 @@ Any request to the server will be validated by checking the role of the user and
 For example, only the super admin can add a new coordinator, and only the coordinator can add a new expert.
 If the user tries to access a resource that they are not allowed to, the server will return a 403 Forbidden error.
 
+The sequence diagram in Figure \ref{fig:Login Sequence Diagram for ODC Collaborator} shows the steps that the user must follow to authenticate in the platform.
+It is valid for all the users of the platform.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{images/sequenceODCExpertLogin.png}
+    \caption{Login Sequence Diagram for ODC Expert}
+    \label{fig:Login Sequence Diagram for ODC Expert}
+\end{figure}
+
+When Adding a new ODC Coordinator or Expert, the super admin or the coordinator must provide the necessary information.
+The system will validate the information and send an email to the new user to set up their password.
+
+The sequence diagram in Figure \ref{fig:Add ODC Expert Sequence Diagram} shows
+the steps that the ODC Coordinator must follow to add a new coordinator to the
+platform.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{images/sequenceAddODCExpert.png}
+    \caption{Add ODC Expert Sequence Diagram}
+    \label{fig:Add ODC Expert Sequence Diagram}
+\end{figure}
+
+\newpage
+After Adding a new coordinator, the system will send an email to the new coordinator with a link to set up their password.
+The sequence diagram in Figure \ref{fig:Activate Account Sequence Diagram} shows the steps that the ODC Expert must follow
+to activate their account.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{images/sequenceActivateAccount.png}
+    \caption{Activate Account Sequence Diagram}
+    \label{fig:Active Account Sequence Diagram}
+\end{figure}
 
 \section{Implementation}

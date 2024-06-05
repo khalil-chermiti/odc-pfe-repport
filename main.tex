@@ -1,11 +1,11 @@
-\documentclass{report}
+\documentclass[12pt]{report}
 \usepackage[utf8]{inputenc}
 \usepackage{array}
 \usepackage{ragged2e}
 \usepackage{longtable}
 \usepackage{titlesec}
 \usepackage{graphicx}
-\usepackage{geometry}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
 \usepackage{enumitem}
 \usepackage{setspace}
 \usepackage{fancyhdr}
@@ -41,12 +41,11 @@
 
 \maketitle
 
-
-
 \tableofcontents
 \listoffigures
 \listoftables
 
+\include{chapters/dedication}
 \include{chapters/Acknowledgement}
 \include{chapters/Introduction}
 \include{chapters/chapter1}

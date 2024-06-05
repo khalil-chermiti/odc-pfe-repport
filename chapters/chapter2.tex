@@ -122,53 +122,60 @@ a product, as well as all the elements requiring the project team's
 intervention. All items included in the Scrum backlog are prioritized to
 indicate the order of their implementation.
 
-\begin{longtable}{|l|l|l|}
-      \caption{Product backlog}                                                                             \\    %%%%<===
+\begin{longtable}{|l|p{10cm}|l|}
+      \caption{Product backlog}                                                                                                \\
       \hline
-      \textbf{User story id} & \textbf{User story}                                      & \textbf{Priority} \\ \hline
+      \rowcolor{blue!20} \textbf{User story id} & \textbf{User story}                                      & \textbf{Priority} \\
+      \hline
       \endfirsthead
-      %
+
       \hline
-      \textbf{User story id} & \textbf{User story}                                      & \textbf{Priority} \\ \hline
+      \rowcolor{blue!20} \textbf{User story id} & \textbf{User story}                                      & \textbf{Priority} \\
+      \hline
       \endhead
+
+      \hline
+      \endfoot
+
+      \hline
       \endlastfoot
-      %
-      1                      & as a super admin, I want to authenticate to the platform & 1                 \\ \hline
-      2                      & as a super admin, I want to logout of the platform       & 3                 \\ \hline
-      3                      & as a super admin, I want to add an ODC coordinator       & 2                 \\ \hline
-      4                      & as a super admin, I want to view ODC coordinators List   & 2                 \\ \hline
-      5                      & as a super admin, I want to view  ODC Exepert List       & 2                 \\ \hline
-      6                      & as a super admin, I want to disable an ODC coordinator   & 2                 \\ \hline
-      7                      & as a super admin, I want to disable an ODC Exepert       & 2                 \\ \hline
-      8                      & as an ODC Coordinator, I want connect to my account      & 2                 \\ \hline
-      9                      & as an ODC Coordinator, I want to logout of my account    & 3                 \\ \hline
-      10                     & as an ODC Coordinator, I want to update my profile       & 3                 \\ \hline
-      11                     & as an ODC Coordinator, I want to change my password      & 3                 \\ \hline
-      12                     & as an ODC Coordinator, I want to add an ODC expert       & 1                 \\ \hline
-      13                     & as an ODC Coordinator, I want to disable an ODC expert   & 2                 \\ \hline
-      14                     & as an ODC Coordinator, I want to enable an ODC expert    & 2                 \\ \hline
-      15                     & as an ODC Coordinator, I want to view ODC experts list   & 3                 \\ \hline
-      16                     & as an ODC Coordinator, I want to add an event            & 1                 \\ \hline
-      17                     & as an ODC Coordinator, I want to view all events         & 1                 \\ \hline
-      18                     & as an ODC Coordinator, I want to edit an event           & 2                 \\ \hline
-      19                     & as an ODC Coordinator, I want to delete an event         & 2                 \\ \hline
-      20                     & as an ODC Coordinator, I want to view an event           & 3                 \\ \hline
-      21                     & as an ODC Expert, I want to connect to my account        & 2                 \\ \hline
-      22                     & as an ODC Expert, I want to logout of my account         & 3                 \\ \hline
-      23                     & as an ODC Expert, I want to update my profile            & 3                 \\ \hline
-      24                     & as an ODC Expert, I want to change my password           & 3                 \\ \hline
-      25                     & as an ODC Expert, I want to add a problem                & 1                 \\ \hline
-      26                     & as an ODC Expert, I want to view all problems            & 1                 \\ \hline
-      27                     & as an ODC Expert, I want to edit a problem               & 2                 \\ \hline
-      28                     & as an ODC Expert, I want to delete a problem             & 2                 \\ \hline
-      29                     & as an ODC Expert, I want to view a problem               & 3                 \\ \hline
-      30                     & as an ODC Expert, I want to add a quiz                   & 1                 \\ \hline
-      31                     & as an ODC Expert, I want to view all quizzes             & 1                 \\ \hline
-      32                     & as an ODC Expert, I want to edit a quiz                  & 2                 \\ \hline
-      33                     & as an ODC Expert, I want to delete a quiz                & 2                 \\ \hline
-      34                     & as an ODC Expert, I want to view a quiz                  & 3                 \\ \hline
-      35                     & as a participant, I want to register to an event         & 2                 \\ \hline
-      36                     & as a participant, I want to participate in an event      & 2                 \\ \hline
+
+      1                                         & as a super admin, I want to authenticate to the platform & 1                 \\ \hline
+      2                                         & as a super admin, I want to logout of the platform       & 3                 \\ \hline
+      3                                         & as a super admin, I want to add an ODC coordinator       & 2                 \\ \hline
+      4                                         & as a super admin, I want to view ODC coordinators List   & 2                 \\ \hline
+      5                                         & as a super admin, I want to view ODC Expert List         & 2                 \\ \hline
+      6                                         & as a super admin, I want to disable an ODC coordinator   & 2                 \\ \hline
+      7                                         & as a super admin, I want to disable an ODC Expert        & 2                 \\ \hline
+      8                                         & as an ODC Coordinator, I want to connect to my account   & 2                 \\ \hline
+      9                                         & as an ODC Coordinator, I want to logout of my account    & 3                 \\ \hline
+      10                                        & as an ODC Coordinator, I want to update my profile       & 3                 \\ \hline
+      11                                        & as an ODC Coordinator, I want to change my password      & 3                 \\ \hline
+      12                                        & as an ODC Coordinator, I want to add an ODC expert       & 1                 \\ \hline
+      13                                        & as an ODC Coordinator, I want to disable an ODC expert   & 2                 \\ \hline
+      14                                        & as an ODC Coordinator, I want to enable an ODC expert    & 2                 \\ \hline
+      15                                        & as an ODC Coordinator, I want to view ODC experts list   & 3                 \\ \hline
+      16                                        & as an ODC Coordinator, I want to add an event            & 1                 \\ \hline
+      17                                        & as an ODC Coordinator, I want to view all events         & 1                 \\ \hline
+      18                                        & as an ODC Coordinator, I want to edit an event           & 2                 \\ \hline
+      19                                        & as an ODC Coordinator, I want to delete an event         & 2                 \\ \hline
+      20                                        & as an ODC Coordinator, I want to view an event           & 3                 \\ \hline
+      21                                        & as an ODC Expert, I want to connect to my account        & 2                 \\ \hline
+      22                                        & as an ODC Expert, I want to logout of my account         & 3                 \\ \hline
+      23                                        & as an ODC Expert, I want to update my profile            & 3                 \\ \hline
+      24                                        & as an ODC Expert, I want to change my password           & 3                 \\ \hline
+      25                                        & as an ODC Expert, I want to add a problem                & 1                 \\ \hline
+      26                                        & as an ODC Expert, I want to view all problems            & 1                 \\ \hline
+      27                                        & as an ODC Expert, I want to edit a problem               & 2                 \\ \hline
+      28                                        & as an ODC Expert, I want to delete a problem             & 2                 \\ \hline
+      29                                        & as an ODC Expert, I want to view a problem               & 3                 \\ \hline
+      30                                        & as an ODC Expert, I want to add a quiz                   & 1                 \\ \hline
+      31                                        & as an ODC Expert, I want to view all quizzes             & 1                 \\ \hline
+      32                                        & as an ODC Expert, I want to edit a quiz                  & 2                 \\ \hline
+      33                                        & as an ODC Expert, I want to delete a quiz                & 2                 \\ \hline
+      34                                        & as an ODC Expert, I want to view a quiz                  & 3                 \\ \hline
+      35                                        & as a participant, I want to register to an event         & 2                 \\ \hline
+      36                                        & as a participant, I want to participate in an event      & 2                 \\ \hline
 \end{longtable}
 
 
@@ -198,13 +205,11 @@ that store the data related to that collection. The schema diagram provides a vi
 between the collections and the fields in each collection.
 
 
-\begin{sidewaysfigure}[h!]
+\begin{figure}[h!]
       \centering
-      \setlength\fboxsep{0pt} % Adjusts the separation between the image and the border
-      \setlength\fboxrule{2pt} % Adjusts the thickness of the border
-      \fcolorbox{orange}{white}{\includegraphics[width=0.8\paperheight, height=0.65\paperwidth]{images/entityDiagram.png}}
+      \includegraphics[width=0.9\textwidth, height=1\textwidth]{images/databaseSchema.png}
       \caption{MongoDB Schema Diagram}\label{MongoDB Schema Diagram}
-\end{sidewaysfigure}
+\end{figure}
 
 
 \section{Software and technology stack}
@@ -360,10 +365,13 @@ The project repositories are as follows:
             the front end using RESTful APIs.
 \end{itemize}
 
-The following figure shows the architecture of the application:
+
+The following figure \ref{fig:architecture} shows the architecture of our application.
+and how the different components interact with each other.
+
 \begin{figure}[h!]
       \centering
-      \includegraphics[height=1\textwidth]{images/softwareArchitecture.png}
+      \includegraphics[width=0.7\textwidth]{images/applicationArchitecture.png}
       \caption{Application architecture}
       \label{fig:architecture}
 \end{figure}

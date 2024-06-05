@@ -14,6 +14,7 @@ The next sections contains the sprint backlog, and our analysis and implementati
 After gathering the requirements we transformed them into user stories and tasks that we need to implement in this sprint.
 the following table contains the user stories and their corresponding tasks.
 
+\normalsize
 \begin{longtable}{|>{\centering\arraybackslash}p{1cm}|p{6cm}|>{\centering\arraybackslash}p{1cm}|p{8cm}|}
   \hline
   \rowcolor{blue!20} \textbf{ID} & \textbf{User Story}                                               & \textbf{ID} & \textbf{Tasks}                                           \\ \hline
@@ -76,62 +77,68 @@ Any other features will be added incrementally in the next sprints as we progres
 The following tables contain the description of the main use cases that we focussed on implementing during this sprint.
 
 \subsubsection{Use Case Description for Creating a Quiz}
+
+\normalsize
 \begin{longtable}{|p{3cm}|p{12cm}|}
   \hline
-  \rowcolor{green!20} \textbf{Use Case}       & \textbf{Create a Quiz}                                             \\ \hline
-  \textbf{User Role}                          & \textbf{ODC Expert}                                                \\ \hline
-  \textbf{Description}                        & The ODC Expert wants to create a new quiz.                         \\ \hline
-  \textbf{Preconditions}                      & The ODC Expert is logged in to the system.                         \\ \hline
-  \textbf{Postconditions}                     & A new quiz is created and added to the system.                     \\ \hline
-  \multirow{10}{*}{\textbf{Success Scenario}} &
-  1. ODC Expert selects the option to create a new quiz.                                                           \\ \cline{2-2}
-                                              & 2. System prompts the ODC Expert to enter the name of the quiz.    \\ \cline{2-2}
-                                              & 3. ODC Expert enters the name of the quiz.                         \\ \cline{2-2}
-                                              & 5. ODC Expert adds tags to the quiz.                               \\ \cline{2-2}
-                                              & 7. ODC Expert adds quiz questions.                                 \\ \cline{2-2}
-                                              & 8. ODC Expert confirms to create the quiz.                         \\ \cline{2-2}
-                                              & 9. System validates that the quiz has a name, tags, and questions. \\ \cline{2-2}
-                                              & 10. System creates the quiz and adds it to the system.             \\ \hline
+  \rowcolor{green!20} \textbf{Use Case}    & \textbf{Create a Quiz}                                             \\ \hline
+  \textbf{User Role}                       & \textbf{ODC Expert}                                                \\ \hline
+  \textbf{Description}                     & The ODC Expert wants to create a new quiz.                         \\ \hline
+  \textbf{Preconditions}                   & The ODC Expert is logged in to the system.                         \\ \hline
+  \textbf{Postconditions}                  & A new quiz is created and added to the system.                     \\ \hline
+  \multirow{10}{*}{\textbf{Main Scenario}} &
+  1. ODC Expert selects the option to create a new quiz.                                                        \\ \cline{2-2}
+                                           & 2. System prompts the ODC Expert to enter the name of the quiz.    \\ \cline{2-2}
+                                           & 3. ODC Expert enters the name of the quiz.                         \\ \cline{2-2}
+                                           & 5. ODC Expert adds tags to the quiz.                               \\ \cline{2-2}
+                                           & 7. ODC Expert adds quiz questions.                                 \\ \cline{2-2}
+                                           & 8. ODC Expert confirms to create the quiz.                         \\ \cline{2-2}
+                                           & 9. System validates that the quiz has a name, tags, and questions. \\ \cline{2-2}
+                                           & 10. System creates the quiz and adds it to the system.             \\ \hline
   \caption{Use Case Description for Creating a Quiz}\label{tab:create_quiz_use_case}
 \end{longtable}
 
 \subsubsection{Use Case Description for Adding a Problem}
+
+\normalsize
 \begin{longtable}{|p{3cm}|p{12cm}|}
   \hline
-  \rowcolor{green!20} \textbf{Use Case}      & \textbf{Add Problem}                                                          \\ \hline
-  \textbf{User Role}                         & \textbf{ODC Expert}                                                           \\ \hline
-  \textbf{Description}                       & The ODC Expert wants to add a new problem to the system.                      \\ \hline
-  \textbf{Preconditions}                     & The ODC Expert is logged in to the system.                                    \\ \hline
-  \textbf{Postconditions}                    & A new problem is added to the system.                                         \\ \hline
-  \multirow{7}{*}{\textbf{Success Scenario}} & 1. ODC Expert selects the option to add a new problem.                        \\ \cline{2-2}
-                                             & 2. System prompts the ODC Expert to enter the name of the problem.            \\ \cline{2-2}
-                                             & 3. ODC Expert enters the name of the problem.                                 \\ \cline{2-2}
-                                             & 4. System prompts the ODC Expert to write the problem description.            \\ \cline{2-2}
-                                             & 5. ODC Expert writes the problem description.                                 \\ \cline{2-2}
-                                             & 6. System prompts the ODC Expert to add the problem function/class signature. \\ \cline{2-2}
-                                             & 7. ODC Expert adds the problem function/class signature.                      \\ \cline{2-2}
-                                             & 8. ODC Expert adds problem test cases.                                        \\ \cline{2-2}
-                                             & 9. ODC Expert confirms to create the problem.                                 \\ \cline{2-2}
-                                             & 10. System creates the problem and adds it to the system.                     \\ \hline
+  \rowcolor{green!20} \textbf{Use Case}   & \textbf{Add Problem}                                                          \\ \hline
+  \textbf{User Role}                      & \textbf{ODC Expert}                                                           \\ \hline
+  \textbf{Description}                    & The ODC Expert wants to add a new problem to the system.                      \\ \hline
+  \textbf{Preconditions}                  & The ODC Expert is logged in to the system.                                    \\ \hline
+  \textbf{Postconditions}                 & A new problem is added to the system.                                         \\ \hline
+  \multirow{7}{*}{\textbf{Main Scenario}} & 1. ODC Expert selects the option to add a new problem.                        \\ \cline{2-2}
+                                          & 2. System prompts the ODC Expert to enter the name of the problem.            \\ \cline{2-2}
+                                          & 3. ODC Expert enters the name of the problem.                                 \\ \cline{2-2}
+                                          & 4. System prompts the ODC Expert to write the problem description.            \\ \cline{2-2}
+                                          & 5. ODC Expert writes the problem description.                                 \\ \cline{2-2}
+                                          & 6. System prompts the ODC Expert to add the problem function/class signature. \\ \cline{2-2}
+                                          & 7. ODC Expert adds the problem function/class signature.                      \\ \cline{2-2}
+                                          & 8. ODC Expert adds problem test cases.                                        \\ \cline{2-2}
+                                          & 9. ODC Expert confirms to create the problem.                                 \\ \cline{2-2}
+                                          & 10. System creates the problem and adds it to the system.                     \\ \hline
   \caption{Use Case Description for Adding a Problem}\label{tab:add_problem_use_case}
 \end{longtable}
 
 \subsubsection{Use Case Description for Creating a Test}
+
+\normalsize
 \begin{longtable}{|p{3cm}|p{12cm}|}
   \hline
-  \rowcolor{green!20} \textbf{Use Case}      & \textbf{Create Test}                                                              \\ \hline
-  \textbf{User Role}                         & \textbf{ODC Expert}                                                               \\ \hline
-  \textbf{Description}                       & The ODC Expert wants to create a new test by selecting a quiz and a problem.      \\ \hline
-  \textbf{Preconditions}                     & The ODC Expert is logged in to the system and has access to quizzes and problems. \\ \hline
-  \textbf{Postconditions}                    & A new test is created and added to the system.                                    \\ \hline
-  \multirow{6}{*}{\textbf{Success Scenario}} & 1. ODC Expert selects the option to create a new test.                            \\ \cline{2-2}
-                                             & 2. ODC Expert enters the name of the test.                                        \\ \cline{2-2}
-                                             & 3. ODC Expert searches for a quiz.                                                \\ \cline{2-2}
-                                             & 4. ODC Expert selects a quiz.                                                     \\ \cline{2-2}
-                                             & 5. ODC Expert searches for a problem.                                             \\ \cline{2-2}
-                                             & 6. ODC Expert selects a problem.                                                  \\ \cline{2-2}
-                                             & 7. ODC Expert confirms to create the test.                                        \\ \cline{2-2}
-                                             & 8. System creates the test and adds it to the system.                             \\ \hline
+  \rowcolor{green!20} \textbf{Use Case}   & \textbf{Create Test}                                                              \\ \hline
+  \textbf{User Role}                      & \textbf{ODC Expert}                                                               \\ \hline
+  \textbf{Description}                    & The ODC Expert wants to create a new test by selecting a quiz and a problem.      \\ \hline
+  \textbf{Preconditions}                  & The ODC Expert is logged in to the system and has access to quizzes and problems. \\ \hline
+  \textbf{Postconditions}                 & A new test is created and added to the system.                                    \\ \hline
+  \multirow{6}{*}{\textbf{Main Scenario}} & 1. ODC Expert selects the option to create a new test.                            \\ \cline{2-2}
+                                          & 2. ODC Expert enters the name of the test.                                        \\ \cline{2-2}
+                                          & 3. ODC Expert searches for a quiz.                                                \\ \cline{2-2}
+                                          & 4. ODC Expert selects a quiz.                                                     \\ \cline{2-2}
+                                          & 5. ODC Expert searches for a problem.                                             \\ \cline{2-2}
+                                          & 6. ODC Expert selects a problem.                                                  \\ \cline{2-2}
+                                          & 7. ODC Expert confirms to create the test.                                        \\ \cline{2-2}
+                                          & 8. System creates the test and adds it to the system.                             \\ \hline
   \caption{Use Case Description for Creating a Test}\label{tab:create_test_use_case}
 \end{longtable}
 
